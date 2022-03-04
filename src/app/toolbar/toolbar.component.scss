@@ -1,0 +1,15 @@
+@import "../../assets/scss/constants.scss";
+::ng-deep {
+  //https://github.com/angular/components/blob/master/guides/customizing-component-styles.md#styling-overlay-components
+  app-toolbar {
+    .mat-toolbar {
+      background-color: $green;
+    }
+    .mat-toolbar-single-row {
+      padding: 0 250px;
+    }
+    .routes {
+      margin-left: 20px;
+    }
+  }
+}
