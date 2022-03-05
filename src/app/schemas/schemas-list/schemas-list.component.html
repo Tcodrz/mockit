@@ -1,12 +1,19 @@
 <mat-selection-list #s (selectionChange)="onSelect($event)">
     <mat-list-option *ngFor="let schema of schemas" [value]="schema" [checkboxPosition]="'before'">
         <div class="schema">
-            <div class="title">{{ schema.name }}</div>
-            <div class="elements">
-                <span class="element" *ngFor="let element of schema.elements; let i = index">
-                    <span *ngIf="i !== 0">|</span>
-                    {{ element.fieldName }}
-                </span>
+            <div class="details">
+                <div class="title">{{ schema.name }}</div>
+                <div class="elements">
+                    <span class="element" *ngFor="let element of schema.elements; let i = index">
+                        <span *ngIf="i !== 0">|</span>
+                        {{ element.fieldName }}
+                    </span>
+                </div>
+            </div>
+            <div class="goto">
+                <a mat-icon-button [routerLink]="['create', {schemaID: schema.id}]">
+                    <mat-icon>launch</mat-icon>
+                </a>
             </div>
         </div>
     </mat-list-option>
