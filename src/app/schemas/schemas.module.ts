@@ -3,10 +3,10 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../material/material.module';
 import { SchemaCreatorComponent } from './creator/schema-creator.component';
-import { SchemasRoutingModule } from './schemas-routing.module';
-import { SchemasComponent } from './schemas.component';
 import { FieldRowComponent } from './field-row/field-row.component';
 import { SchemasListComponent } from './schemas-list/schemas-list.component';
+import { SchemasRoutingModule } from './schemas-routing.module';
+import { SchemasComponent } from './schemas.component';
 
 
 @NgModule({
@@ -22,6 +22,9 @@ import { SchemasListComponent } from './schemas-list/schemas-list.component';
     MaterialModule,
     ReactiveFormsModule,
     SchemasRoutingModule,
+  ],
+  exports: [
+    SchemaCreatorComponent,
   ]
 })
 export class SchemasModule { }

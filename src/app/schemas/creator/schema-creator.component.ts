@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
-import { SchemaElement, SchemaElementType } from 'src/app/core/models/schema-element.interface';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { SchemaElement } from 'src/app/core/models/schema-element.interface';
 import { ISchema } from 'src/app/core/models/schema.interface';
-
-
 
 @Component({
   selector: 'app-schema-creator',
@@ -11,14 +10,18 @@ import { ISchema } from 'src/app/core/models/schema.interface';
   styleUrls: ['./schema-creator.component.scss']
 })
 export class SchemaCreatorComponent implements OnInit {
+  @Input() withName: boolean = true;
   schemaElements: SchemaElement[] = [
     { type: 'id', fieldName: 'id', },
-    { type: 'string', fieldName: 'name' },
-    { type: 'number', fieldName: 'phone' },
   ];
   schema: ISchema = {} as ISchema;
-  constructor() { }
+  constructor(
+    private activeRoute: ActivatedRoute
+  ) { }
   ngOnInit(): void {
+    this.activeRoute.params.subscribe((params) => {
+      console.log(params['schemaID']);
+    })
   }
   drop(event: CdkDragDrop<string[]>) {
     moveItemInArray([], event.previousIndex, event.currentIndex);

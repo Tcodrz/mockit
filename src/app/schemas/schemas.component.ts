@@ -9,6 +9,7 @@ import { ISchema } from '../core/models/schema.interface';
 export class SchemasComponent implements OnInit {
   schemas: ISchema[] = [
     {
+      id: 1,
       name: 'Student',
       elements: [
         { type: 'id', fieldName: 'id', },
@@ -17,6 +18,7 @@ export class SchemasComponent implements OnInit {
       ]
     },
     {
+      id: 2,
       name: 'Teacher',
       elements: [
         { type: 'id', fieldName: 'id', },

@@ -1,3 +1,12 @@
-.schema-name {
-  display: inline;
+.schema-creator {
+  margin-bottom: 20px;
+  .schema-name {
+    display: inline;
+  }
+}
+.schema-actions {
+  margin-top: 20px;
+  button {
+    margin-right: 10px;
+  }
 }

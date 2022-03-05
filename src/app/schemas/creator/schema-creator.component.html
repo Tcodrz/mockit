@@ -1,17 +1,25 @@
-<div>
-    <h2 class="schema-name">Schema Name: </h2>
-    <mat-form-field appearance="outline">
-        <mat-label>Field Name</mat-label>
-        <input matInput [(ngModel)]="schema.name">
-    </mat-form-field>
-</div>
-<div cdkDropList (cdkDropListDropped)="drop($event)">
-    <div *ngFor="let element of schemaElements" cdkDrag>
-        <div *cdkDragPlaceholder></div>
-        <mat-icon cdkDragHandle>drag_indicator</mat-icon>
-        <app-field-row [element]="element" (deleteElement)="onDeleteElement($event)"></app-field-row>
+<div class="schema-creator">
+    <div *ngIf="withName">
+        <h2 class="schema-name">Schema Name: </h2>
+        <mat-form-field appearance="outline">
+            <mat-label>Field Name</mat-label>
+            <input matInput [(ngModel)]="schema.name">
+        </mat-form-field>
+    </div>
+    <div cdkDropList (cdkDropListDropped)="drop($event)">
+        <div *ngFor="let element of schemaElements" cdkDrag>
+            <div *cdkDragPlaceholder></div>
+            <mat-icon cdkDragHandle>drag_indicator</mat-icon>
+            <app-field-row [element]="element" (deleteElement)="onDeleteElement($event)"></app-field-row>
+        </div>
+    </div>
+    <div>
+        <button mat-raised-button (click)="onAddField()">ADD ANOTHER FIELD</button>
     </div>
 </div>
-<div>
-    <button mat-raised-button (click)="onAddField()">ADD ANOTHER FIELD</button>
+<mat-divider></mat-divider>
+<div class="schema-actions">
+    <button mat-raised-button class="primary">DOWNLOAD DATA</button>
+    <button mat-raised-button class="primary-outline">SAVE THIS SCHEMA</button>
+    <button mat-raised-button class="primary-outline">PREVIEW</button>
 </div>
