@@ -9,9 +9,9 @@
     <div *ngFor="let element of schemaElements" cdkDrag>
         <div *cdkDragPlaceholder></div>
         <mat-icon cdkDragHandle>drag_indicator</mat-icon>
-        <app-field-row [element]="element"></app-field-row>
+        <app-field-row [element]="element" (deleteElement)="onDeleteElement($event)"></app-field-row>
     </div>
 </div>
 <div>
-    <button mat-raised-button>ADD ANOTHER FIELD</button>
+    <button mat-raised-button (click)="onAddField()">ADD ANOTHER FIELD</button>
 </div>

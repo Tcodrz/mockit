@@ -14,7 +14,18 @@ body {
 .app-container {
   padding: 50px 250px;
 }
-
 .pointer {
   cursor: pointer;
+}
+h1 {
+  color: $green;
+}
+
+// BUTTONS
+button.primary,
+a.primary {
+  background-color: $green;
+}
+button.primary-outline {
+  color: $green;
 }

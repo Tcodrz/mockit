@@ -6,6 +6,7 @@ import { SchemaCreatorComponent } from './creator/schema-creator.component';
 import { SchemasRoutingModule } from './schemas-routing.module';
 import { SchemasComponent } from './schemas.component';
 import { FieldRowComponent } from './field-row/field-row.component';
+import { SchemasListComponent } from './schemas-list/schemas-list.component';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { FieldRowComponent } from './field-row/field-row.component';
     SchemaCreatorComponent,
     SchemasComponent,
     FieldRowComponent,
+    SchemasListComponent,
   ],
   imports: [
     CommonModule,

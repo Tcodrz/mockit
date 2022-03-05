@@ -1,1 +1,10 @@
-<app-schema-creator></app-schema-creator>
+<h1>My Schemas</h1>
+<div class="schemas-actions">
+    <a mat-raised-button class="schemas-actions-btn primary" [routerLink]="['create']">CREATE A SCHEMA</a>
+    <button mat-raised-button class="schemas-actions-btn primary-outline">DELETE SELECTED</button>
+</div>
+<mat-divider></mat-divider>
+<div class="schemas-list">
+
+</div>
+<app-schemas-list [schemas]="schemas"></app-schemas-list>

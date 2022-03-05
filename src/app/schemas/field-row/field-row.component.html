@@ -1,5 +1,5 @@
 <div class="schema-element-container">
-    <mat-form-field class="example-full-width" appearance="outline">
+    <mat-form-field appearance="outline">
         <mat-label>Field Name</mat-label>
         <input matInput [(ngModel)]="element.fieldName">
     </mat-form-field>
@@ -11,4 +11,7 @@
             </mat-option>
         </mat-select>
     </mat-form-field>
+    <button mat-icon-button (click)="onDeleteElement()">
+        <mat-icon>delete_outline</mat-icon>
+    </button>
 </div>

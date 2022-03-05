@@ -23,4 +23,12 @@ export class SchemaCreatorComponent implements OnInit {
   drop(event: CdkDragDrop<string[]>) {
     moveItemInArray([], event.previousIndex, event.currentIndex);
   }
+  onAddField() {
+    const schemaElement: SchemaElement = { fieldName: '', type: 'string' };
+    this.schemaElements.push(schemaElement);
+  }
+  onDeleteElement(element: SchemaElement): void {
+    const index = this.schemaElements.findIndex(e => e === element);
+    this.schemaElements.splice(index, 1);
+  }
 }
