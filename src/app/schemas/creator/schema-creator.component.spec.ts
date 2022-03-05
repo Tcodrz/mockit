@@ -8,9 +8,9 @@ describe('SchemaCreatorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SchemaCreatorComponent ]
+      declarations: [SchemaCreatorComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

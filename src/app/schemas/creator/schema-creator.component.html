@@ -1,0 +1,17 @@
+<div>
+    <h2 class="schema-name">Schema Name: </h2>
+    <mat-form-field appearance="outline">
+        <mat-label>Field Name</mat-label>
+        <input matInput [(ngModel)]="schema.name">
+    </mat-form-field>
+</div>
+<div cdkDropList (cdkDropListDropped)="drop($event)">
+    <div *ngFor="let element of schemaElements" cdkDrag>
+        <div *cdkDragPlaceholder></div>
+        <mat-icon cdkDragHandle>drag_indicator</mat-icon>
+        <app-field-row [element]="element"></app-field-row>
+    </div>
+</div>
+<div>
+    <button mat-raised-button>ADD ANOTHER FIELD</button>
+</div>

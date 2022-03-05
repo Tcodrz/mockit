@@ -1,0 +1,14 @@
+<div class="schema-element-container">
+    <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Field Name</mat-label>
+        <input matInput [(ngModel)]="element.fieldName">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Type</mat-label>
+        <mat-select [(ngModel)]="element.type" name="food">
+            <mat-option *ngFor="let type of schemaElementTypes" [value]="type">
+                {{type}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
