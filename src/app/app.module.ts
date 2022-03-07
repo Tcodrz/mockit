@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToolbarModule } from './toolbar/toolbar.module';
 import { HomeComponent } from './home/home.component';
 import { SchemasModule } from './schemas/schemas.module';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { SchemasModule } from './schemas/schemas.module';
     BrowserAnimationsModule,
     ToolbarModule,
     SchemasModule,
+    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

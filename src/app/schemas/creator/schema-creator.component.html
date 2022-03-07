@@ -2,8 +2,7 @@
     <div *ngIf="withName">
         <h2 class="schema-name">Schema Name: </h2>
         <mat-form-field appearance="outline">
-            <mat-label>Field Name</mat-label>
-            <input matInput [(ngModel)]="schema.name">
+            <input matInput [(ngModel)]="schema.name" placeholder="Model Name">
         </mat-form-field>
     </div>
     <div cdkDropList (cdkDropListDropped)="drop($event)">

@@ -12,7 +12,7 @@ import { ISchema } from 'src/app/core/models/schema.interface';
 export class SchemaCreatorComponent implements OnInit {
   @Input() withName: boolean = true;
   schemaElements: SchemaElement[] = [
-    { type: 'id', fieldName: 'id', },
+    { type: 'id', fieldName: '', },
   ];
   schema: ISchema = {} as ISchema;
   constructor(
